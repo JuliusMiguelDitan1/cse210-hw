@@ -3,13 +3,11 @@ using System;
 // Additionally, this code is not working as intended and needs refinement but is still based upon the codes.
 public class Journal
 {
-    public List<Entry> _entries;
+    public List<Entry> _entries = new List<Entry>();
     public PromptGenerator promptGenerator;
     public Journal() 
     {
-        _entries = new List<Entry>();
         promptGenerator = new PromptGenerator();
-
     }
     public void AddEntry()
     {
