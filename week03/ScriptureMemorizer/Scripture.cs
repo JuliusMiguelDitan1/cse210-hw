@@ -7,6 +7,8 @@ public class Scripture
 
     private int i = 0;
 
+     List<int> listNumbers = new List<int>();
+
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
@@ -23,9 +25,14 @@ public class Scripture
     {
         if (i < _word.Count)
         {
-            Random random = new Random();
-            int index = random.Next(0,_word.Count);
-            _word[index].Hide();
+           var rand = new Random();
+            int number;
+                do {
+                        number = rand.Next(0,  _word.Count);
+                } while (listNumbers.Contains(number)); {
+                    listNumbers.Add(number);
+                }
+            _word[listNumbers[i]].Hide();
              i++;
             
         }
@@ -38,6 +45,6 @@ public class Scripture
     public string Displayall() 
     {
         string renderedText = string.Join(" ", _word);
-        return $"{_reference.GetDisplay()}: {renderedText} {i} {_word.Count}";
+        return $"{_reference.GetDisplay()}: {renderedText} {i} {_word.Count} {listNumbers.Count}";
     }
 }
