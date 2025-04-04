@@ -49,8 +49,7 @@ public class Activity {
         currentTime = DateTime.Now;
             }
         Console.Write("\b\b\b\b\b\b\b");
-        
-
+        Console.WriteLine("             ");
     }
 
     public void ShowCountDown(int seconds) {

@@ -14,7 +14,6 @@ public class BreathingActivity : Activity {
             {
         Console.WriteLine("Breathe in...");
         ShowSpinner(4);
-        Thread.Sleep(1000);
         Console.WriteLine("Breathe out...");
         ShowSpinner(4);
         currentTime = DateTime.Now;
