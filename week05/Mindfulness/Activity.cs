@@ -48,6 +48,8 @@ public class Activity {
         Console.Write("\b\b\b\b\b\b\b"); 
         currentTime = DateTime.Now;
             }
+        Console.Write("\b\b\b\b\b\b\b");
+        
 
     }
 

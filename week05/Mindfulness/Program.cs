@@ -10,6 +10,7 @@ class Program
         Console.Clear();
         Console.WriteLine("Be ready...");
         breath.ShowSpinner(3);
+        
         breath.Run();
         breath.DisplayEndingMessage();
 

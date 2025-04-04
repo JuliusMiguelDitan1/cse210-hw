@@ -12,11 +12,10 @@ public class BreathingActivity : Activity {
         DateTime currentTime = DateTime.Now;
         while (currentTime < futureTime)
             {
-        Console.Write("Breathe in...");
+        Console.WriteLine("Breathe in...");
         ShowSpinner(4);
-        Console.WriteLine();
         Thread.Sleep(1000);
-        Console.Write("Breathe out...");
+        Console.WriteLine("Breathe out...");
         ShowSpinner(4);
         currentTime = DateTime.Now;
         }
