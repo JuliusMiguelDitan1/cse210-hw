@@ -57,15 +57,17 @@ public class Activity {
         DateTime futureTime = startTime.AddSeconds(seconds);
 
         DateTime currentTime = DateTime.Now;
-        int i = 0; 
+        int i = seconds; 
         while (currentTime < futureTime)
             {
-                i++;
                 Console.Write("\b \b"); // Erase the + character
                 Console.Write(i);
                 Thread.Sleep(1000);
+                i--;
         currentTime = DateTime.Now;
         }
+        Console.Write("\b \b");
+        Console.WriteLine("             ");
 
 
     }
