@@ -6,6 +6,7 @@ public class Scripture
     public List<Word> _word;
 
     private int i = 0;
+    
 
      List<int> listNumbers = new List<int>();
 
@@ -23,7 +24,7 @@ public class Scripture
 
    public void HideRandomWords()
     {
-        if (i < _word.Count)
+        if (i <= _word.Count)
         {
            var rand = new Random();
             int number;
@@ -40,7 +41,8 @@ public class Scripture
 
     public bool IsCompletelyHidden()
     {
-        return i >= _word.Count;
+        int t = _word.Count;
+        return i >= t;
     }
     public string Displayall() 
     {

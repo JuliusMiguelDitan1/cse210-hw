@@ -42,6 +42,9 @@ class Program
 
                     if (scripture.IsCompletelyHidden())
                     {
+                        
+                        Console.WriteLine("Great job!");
+                        Thread.Sleep(1000);
                         Console.Clear();
                         break;
                     }
