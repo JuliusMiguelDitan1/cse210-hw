@@ -1,27 +1,30 @@
 
 
-public class EternalGoal : Goal {
+public class SimpleGoal : Goal {
+    private bool _iscomplete;
     private string _ShortName;
     private string _description;
     private int _points;
 
-    public EternalGoal(string name, string desc, int point) : base(name, desc, point) {
+    public SimpleGoal(string name, string desc, int point, bool val) : base(name, desc, point){
         _ShortName = name;
         _description = desc;
         _points = point;
+        _iscomplete = val;
     }
 
     public override void RecordEvent()
     {
+        _iscomplete = true;
         Console.WriteLine($"Congratulations! you have earned {_points} points.");
     }
     public override bool isComplete()
     {
-        return false;
+        return _iscomplete;
     }
     public override string GetStringRepresentation()
     {
-        string a = $"EternalGoal:{_ShortName}:{_description}:{_points}";
+        string a = $"SimpleGoal:{_ShortName}:{_description}:{_points}:{_iscomplete}";
         return a;
     }
 }
